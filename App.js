@@ -6,6 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from './screens/Login'
 import Rigister from './screens/Rigister';
 import Home from './screens/Home';
+import AddChat from './screens/AddChat';
+import Chat from './screens/Chat';
 
 export default function App() {
 
@@ -20,10 +22,12 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={globalScreenOptions}>
+      <Stack.Navigator initialRouteName='Home' screenOptions={globalScreenOptions}>
         <Stack.Screen options={{headerTitleAlign : 'center'}} name="Login" component={Login} />
         <Stack.Screen options={{headerTitleAlign : 'center'}} name="Register" component={Rigister} />
         <Stack.Screen options={{headerTitleAlign : 'center'}} name="Home" component={Home} />
+        <Stack.Screen options={{headerTitleAlign : 'center'}} name="AddChat" component={AddChat} />
+        <Stack.Screen options={{headerTitleAlign : 'center'}} name="Chat" component={Chat} />
       </Stack.Navigator>
     </NavigationContainer>
   );

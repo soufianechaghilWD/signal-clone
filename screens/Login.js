@@ -19,7 +19,8 @@ const Login = ({ navigation }) => {
     }, [])
 
     const signIn = () => {
-
+        auth.signInWithEmailAndPassword(email, password)
+        .catch(err => alert(err))
     }
 
 
